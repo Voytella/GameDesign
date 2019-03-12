@@ -87,6 +87,46 @@
       
 \end{outline}
 
+\subsection{How is score calculated?}
+
+\begin{outline}[enumerate]
+  \1 The player's score is the number of survivors after several time
+  intervals. The later intervals will have a score multiplier to incentivize
+  survival longevity. 
+    \2 how many survived immediately after the blast? 
+    \2 a week after? 
+    \2 a month after? 
+    \2 a year after?
+  \1 per tile calculations
+    \2 To determine how many people survive the initial blast, each tile will
+    undergo a survivability check to determine what percentage of the people
+    within it survive.
+      \3 A building's structural integrity will determine how likely it is to be
+      destroyed.
+      \3 If a building is destroyed, all its resources and population are lost.
+    \2 The remaining population is used as the starting point for the subsequent
+    calculations.
+  \1 city-wide calculations
+    \2 NOTE: all calculations will be compared to the surviving population; a
+    larger survivor rate means more resources will be needed to keep those
+    people alive
+    \2 the sum of the city's food stores
+      \3 How long can the population be fed?
+      \3 More people require more food. 
+    \2 the state of farms
+      \3 Is the land undamaged enough to be usable?
+      \3 Is there sufficient tooling and fuel to farm more food?
+    \2 the state of medical buildings
+      \3 Is there medical equipment available?
+        \4 Medical equipment can slightly increase survival rate.
+      \3 Medical buildings provide an increase in survival rate; that bonus is
+      lost if the buildings are destroyed.
+    \2 the number of livable buildings
+      \3 People crammed into shelters during the war need someplace to live
+      afterward.
+      \3 If there is not enough housing, the survival rate decreases.
+\end{outline}
+
 %-----------END NOTES-----------
 
 
