@@ -7,10 +7,17 @@
 \usetheme{PaloAlto}
 \usecolortheme{whale}
 
+\addtobeamertemplate{footline}
+{%
+  \usebeamercolor[fg]{title in sidebar}
+  \vskip-1cm\hskip10pt
+  \insertframenumber\,/\,\inserttotalframenumber\kern1em\vskip2pt%
+}
+
 \title{Preparation}
-\author[]{Josef Bostik\\
-  Thomas van Haastrecht\\
-  Eric Pereira\\
+\author[]{Josef Bostik \\
+  Thomas van Haastrecht \\
+  Eric Pereira \\
   Ryan Wojtyla}
 \date{March 15, 2019}
 
@@ -46,6 +53,8 @@
 
   \frametitle{Settlement}
 
+  \begin{multicols}{2}
+    
   \begin{outline}
     \1 turn-based strategy
     \1 2D grid
@@ -55,9 +64,23 @@
       \2 high replayability
   \end{outline}
 
+  \columnbreak
+
+  \begin{center}
+    \includegraphics[scale=0.3]{../../Images/civLogo.png}
+  \end{center}
+
+  \begin{center}
+    \includegraphics[scale=0.25]{../../Images/FTLLogo.png}
+  \end{center}
+
+  \end{multicols}
+
 \end{frame}
 
 %-----------END KIND OF GAME-----------
+
+\section{Game Engine}
 
 %----------BEGIN GAME ENGINE----------
 
@@ -65,11 +88,41 @@
 
   \frametitle{Game Engine}
 
-  % stuff about why Godot's the way to go
+  \begin{center}
+    \includegraphics[scale=0.7]{../../Diagrams/GameEngine/GameEngine.png}
+  \end{center}
 
 \end{frame}
 
 %-----------END GAME ENGINE-----------
+
+%----------BEGIN USING GODOT----------
+
+\begin{frame}
+
+  \frametitle{Working with Godot}
+
+  \begin{outline}
+    \1 Steep initial learning curve
+    \1 Recent updates have obsolesced a significant portion of provided
+    community support.
+      \2 solutions for the old system
+    \1 Official Godot documentation is expansive, but it lacks examples.
+    \1 Community tutorials are more example-based.
+  \end{outline}
+
+  \vspace*{1cm}
+
+  \begin{outline}
+    \1 The learning curve soon plateaus.
+    \1 The native scripting language, GDScript, is nice to use.
+    \1 An extensive collection of objects is provided.
+  \end{outline}
+
+\end{frame}
+
+%-----------END USING GODOT-----------
+
 
 \section{Foundations}
 
@@ -255,5 +308,22 @@
 \end{frame}
 
 %-----------END CLASS DIAGRAM-----------
+
+\section{Demo}
+
+%----------BEGIN DEMO----------
+
+\begin{frame}
+
+  \frametitle{Demo}
+
+  \begin{center}
+    \includegraphics[scale=1.5]{../../Preparation/icon.png}
+  \end{center}
+
+\end{frame}
+
+%-----------END DEMO-----------
+
 
 \end{document}
