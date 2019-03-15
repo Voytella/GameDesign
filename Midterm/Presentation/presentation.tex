@@ -1,16 +1,18 @@
 \documentclass[ascpectratio=169]{beamer}
 
-\input{graphicx}
+\usepackage{graphicx}
+\usepackage{outlines}
+\usepackage{multicol}
 
 \usetheme{PaloAlto}
 \usecolortheme{whale}
 
-\title[]{}
+\title{Preparation}
 \author[]{Josef Bostik\\
   Thomas van Haastrecht\\
   Eric Pereira\\
   Ryan Wojtyla}
-\date{\today}
+\date{March 15, 2019}
 
 \begin{document}
 
@@ -22,18 +24,218 @@
 
 %-----------END TITLE-----------
 
-%----------BEGIN SAMPLE----------
+\section{Origins}
 
-%\begin{frame}
-%
-%  \frametitle{title}
-%
-%  \begin{itemize}
-%    \item bullet
-%  \end{itemize}
-%
-%\end{frame}
+%----------BEGIN ORIGINS----------
 
-%-----------END SAMPLE-----------
+\begin{frame}
+
+  \frametitle{Initial Ruminations}
+
+  \begin{center}
+    \includegraphics[scale=0.5]{../../Diagrams/Game/Game.png}
+  \end{center}
+
+\end{frame}
+
+%-----------END ORIGINS-----------
+
+%----------BEGIN KIND OF GAME----------
+
+\begin{frame}
+
+  \frametitle{Settlement}
+
+  \begin{outline}
+    \1 turn-based strategy
+    \1 2D grid
+    \1 rogue-like
+      \2 short
+      \2 procedurally generated (we hope)
+      \2 high replayability
+  \end{outline}
+
+\end{frame}
+
+%-----------END KIND OF GAME-----------
+
+%----------BEGIN GAME ENGINE----------
+
+\begin{frame}
+
+  \frametitle{Game Engine}
+
+  % stuff about why Godot's the way to go
+
+\end{frame}
+
+%-----------END GAME ENGINE-----------
+
+\section{Foundations}
+
+%----------BEGIN PREMISE----------
+
+\begin{frame}
+
+  \frametitle{Story}
+
+  \begin{center}
+    {\Large Prepare for imminent global thermonuclear war!}
+  \end{center}
+
+  \begin{outline}
+    \1 Ensure the survival of as many of your citizens as possible.
+    \1 Manage resources.
+    \1 Modify infrastructure.
+    \1 Pacify the masses.
+  \end{outline}
+
+\end{frame}
+
+%-----------END PREMISE-----------
+
+\section{Pieces}
+
+\subsection{Resources}
+
+%----------BEGIN RESOURCES----------
+
+\begin{frame}
+
+  \frametitle{Resources}
+
+  \begin{center}
+    {\large Food, fuel, tools, medicine, building materials, and more!}
+  \end{center}
+
+  \begin{outline}
+    \1 Optimize the distribution and allocation of limited critical resources.
+    \1 Maintain integrity of transportation infrastructure to ensure swift
+    movement of supplies.
+    \1 Plan for the future.
+  \end{outline}
+
+\end{frame}
+
+%-----------END RESOURCES-----------
+
+\subsection{Buildings}
+
+%----------BEGIN BUILDINGS----------
+
+\begin{frame}
+
+  \frametitle{Buildings}
+
+  \begin{center}
+    {\large Permanent residence or fleeting pleasure?}
+  \end{center}
+
+  \begin{multicols}{2}
+
+  \begin{outline}
+    \1 Buildings play several unique and critical roles within the city.
+    \1 Store resources.
+    \1 Fortify buildings to increase their chance of survival.
+    \1 Maintain buildings to help pacify the population.
+    \1 Production buildings can aid the surviving population.
+  \end{outline}
+
+  \columnbreak
+
+  \begin{center}
+    \includegraphics[scale=0.34, trim=4cm 0 4.5cm 0]{../../Diagrams/Buildings/Buildings.png}
+  \end{center}
+
+  \end{multicols}
+
+\end{frame}
+
+%-----------END BUILDINGS-----------
+
+\subsection{Population}
+
+%----------BEGIN POPULATION----------
+
+\begin{frame}
+
+  \frametitle{Population}
+
+  \begin{center}
+    {\large Who really wants to live anyway?}
+  \end{center}
+
+  \begin{outline}
+    \1 Educate and inform your citizens (or don't).
+    \1 Encourage them to adopt behavior conducive to self-preservation.
+    \1 Keep them happy.
+    \1 Don't push them too hard!
+  \end{outline}
+
+\end{frame}
+
+%-----------END POPULATION-----------
+
+\section{Score}
+
+%----------BEGIN SCORE INITIAL----------
+
+\begin{frame}
+
+  \frametitle{Initial Survival Rate}
+
+  \begin{center}
+    {\large How many survive the battle?}
+  \end{center}
+
+  \begin{outline}
+    \1 Each building has a structural integrity rating.
+    \1 This rating can be improved by using ``building materials'' on them.
+    \1 The likelihood of a building's survival is directly related to its
+    structural integrity rating.
+    \1 If a building is destroyed, everything inside it is lost - both people and
+    resources.
+  \end{outline}
+
+\end{frame}
+
+%-----------END SCORE INITIAL-----------
+
+%----------BEGIN SCORE PROLONGED----------
+
+\begin{frame}
+
+  \frametitle{Prolonged Survival Rate}
+
+  \begin{center}
+    {\large How many survive the war?}
+  \end{center}
+
+  \begin{outline}
+    \1 How much food is left to feed the survivors?
+    \1 How much medical supplies do they have?
+    \1 Are there enough resources to farm?
+    \1 Is there housing enough for everyone?
+  \end{outline}
+
+\end{frame}
+
+%-----------END SCORE PROLONGED-----------
+
+\section{Implementation}
+
+%----------BEGIN CLASS DIAGRAM----------
+
+\begin{frame}
+
+  \frametitle{Class Diagram}
+
+  \begin{center}
+    \includegraphics[scale=0.34, trim=1.5cm 0cm 0cm 2cm]{../../Diagrams/classDiagram.png}
+  \end{center}
+
+\end{frame}
+
+%-----------END CLASS DIAGRAM-----------
 
 \end{document}
