@@ -2,7 +2,7 @@
 <!-- To view this file, download free mind mapping software FreeMind from http://freemind.sourceforge.net -->
 <node CREATED="1552347423369" ID="ID_1581725466" MODIFIED="1552347431988" TEXT="Endgame Simulation">
 <node CREATED="1552347436733" ID="ID_834946564" MODIFIED="1552347464956" POSITION="right" TEXT="Population alive"/>
-<node CREATED="1552347448652" ID="ID_1956084671" MODIFIED="1552347469835" POSITION="right" TEXT="Resources Collected">
+<node CREATED="1552347448652" ID="ID_1956084671" MODIFIED="1552598784988" POSITION="right" TEXT="Resources Collected">
 <node CREATED="1552348222052" ID="ID_98988413" MODIFIED="1552348343101" TEXT="Resources per Population"/>
 </node>
 <node CREATED="1552347505053" ID="ID_1914299421" MODIFIED="1552347937304" POSITION="right" TEXT="Structural Integrity of buildings">
