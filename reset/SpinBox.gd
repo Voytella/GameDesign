@@ -16,4 +16,7 @@ func _ready():
 #	pass
 
 func _on_value_changed(value):
-	get_parent().change_resource_amount(value)
+	if self.name == "MoveResourcesValue":
+		get_parent().change_resource_amount(value, true)
+	else:
+		get_parent().change_resource_amount(value, false)

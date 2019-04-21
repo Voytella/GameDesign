@@ -7,10 +7,19 @@ func _ready():
 	# Initialization here
 	pass
 
-#func _process(delta):
-#	# Called every frame. Delta is time since last frame.
-#	# Update game logic here.
-#	pass
+func _process(delta):
+	var a = get_global_mouse_position()
+	if a.x < 525 or a.x > 677 or a.y < 79 or a.y > 147:
+		get_node("../ResButton").hide_popup()
+	if a.x < 525 or a.x > 677 or a.y < 157 or a.y > 225:
+		get_node("../peopleButton").hide_popup()
+	if a.x < 525 or a.x > 677 or a.y < 235 or a.y > 287:
+		get_node("../FortifyBuilding").hide_popup()
+	if a.x < 525 or a.x > 677 or a.y < 296 or a.y > 348:
+		get_node("../StripResources").hide_popup()
+	if a.x < 525 or a.x > 677 or a.y < 358 or a.y > 410:
+		get_node("../NewsButton").hide_popup()
+
 func _input(event):
 	if event is InputEventMouseButton \
 	and event.button_index==BUTTON_LEFT and \

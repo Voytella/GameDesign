@@ -1,9 +1,10 @@
 extends Button
 
-# class member variables go here, for example:
+# Declare member variables here. Examples:
 # var a = 2
-# var b = "textvar"
+# var b = "text"
 
+# Called when the node enters the scene tree for the first time.
 func _ready():
 	# Called when the node is added to the scene for the first time.
 	# Initialization here
@@ -25,7 +26,7 @@ func popup_hint():
 	if !popup.visible:
 		var x = self.get_rect()
 		x.position = x.position - Vector2(198, 4)
-		x.size = Vector2(185,79)
+		x.size = Vector2(185,63)
 		popup.popup(x)
 		#popup.get_child(0).visible = true
 	

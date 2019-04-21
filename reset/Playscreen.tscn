@@ -1,31 +1,36 @@
-[gd_scene load_steps=31 format=2]
+[gd_scene load_steps=41 format=2]
 
 [ext_resource path="res://Root.gd" type="Script" id=1]
 [ext_resource path="res://images/grasstile.png" type="Texture" id=2]
-[ext_resource path="res://images/verticalroad.png" type="Texture" id=3]
-[ext_resource path="res://images/horizontalroad.png" type="Texture" id=4]
-[ext_resource path="res://images/tsection3.png" type="Texture" id=5]
-[ext_resource path="res://images/tsection4.png" type="Texture" id=6]
-[ext_resource path="res://images/intersection.png" type="Texture" id=7]
-[ext_resource path="res://images/Factory.png" type="Texture" id=8]
-[ext_resource path="res://images/store.png" type="Texture" id=9]
-[ext_resource path="res://images/Apartments32.png" type="Texture" id=10]
-[ext_resource path="res://images/rd_turnroad.png" type="Texture" id=11]
-[ext_resource path="res://images/dl_turnroad.png" type="Texture" id=12]
-[ext_resource path="res://images/lu_turnroad.png" type="Texture" id=13]
-[ext_resource path="res://images/ur_turnroad.png" type="Texture" id=14]
-[ext_resource path="res://images/houses.png" type="Texture" id=15]
-[ext_resource path="res://images/yellowhouses.png" type="Texture" id=16]
-[ext_resource path="res://images/tsection1.png" type="Texture" id=17]
-[ext_resource path="res://images/tsection2.png" type="Texture" id=18]
-[ext_resource path="res://propertiles.gd" type="Script" id=19]
-[ext_resource path="res://HeroLight-Regular.ttf" type="DynamicFontData" id=20]
-[ext_resource path="res://Info_Box.gd" type="Script" id=21]
-[ext_resource path="res://EndTurnButton.gd" type="Script" id=22]
-[ext_resource path="res://ResButton.gd" type="Script" id=23]
-[ext_resource path="res://peopleButton.gd" type="Script" id=24]
-[ext_resource path="res://SpinBox.gd" type="Script" id=25]
-[ext_resource path="res://AcceptDialog.gd" type="Script" id=26]
+[ext_resource path="res://Score.gd" type="Script" id=3]
+[ext_resource path="res://images/verticalroad.png" type="Texture" id=4]
+[ext_resource path="res://images/horizontalroad.png" type="Texture" id=5]
+[ext_resource path="res://images/tsection3.png" type="Texture" id=6]
+[ext_resource path="res://images/tsection4.png" type="Texture" id=7]
+[ext_resource path="res://images/intersection.png" type="Texture" id=8]
+[ext_resource path="res://images/Factory.png" type="Texture" id=9]
+[ext_resource path="res://images/store.png" type="Texture" id=10]
+[ext_resource path="res://images/Apartments32.png" type="Texture" id=11]
+[ext_resource path="res://images/rd_turnroad.png" type="Texture" id=12]
+[ext_resource path="res://images/dl_turnroad.png" type="Texture" id=13]
+[ext_resource path="res://images/lu_turnroad.png" type="Texture" id=14]
+[ext_resource path="res://images/ur_turnroad.png" type="Texture" id=15]
+[ext_resource path="res://images/houses.png" type="Texture" id=16]
+[ext_resource path="res://images/yellowhouses.png" type="Texture" id=17]
+[ext_resource path="res://images/tsection1.png" type="Texture" id=18]
+[ext_resource path="res://images/tsection2.png" type="Texture" id=19]
+[ext_resource path="res://propertiles.gd" type="Script" id=20]
+[ext_resource path="res://HeroLight-Regular.ttf" type="DynamicFontData" id=21]
+[ext_resource path="res://Info_Box.gd" type="Script" id=22]
+[ext_resource path="res://images/happiness.png" type="Texture" id=23]
+[ext_resource path="res://EndTurnButton.gd" type="Script" id=24]
+[ext_resource path="res://NewsButton.gd" type="Script" id=25]
+[ext_resource path="res://CheckBox.gd" type="Script" id=26]
+[ext_resource path="res://FortifyBuilding.gd" type="Script" id=27]
+[ext_resource path="res://StripResources.gd" type="Script" id=28]
+[ext_resource path="res://ResButton.gd" type="Script" id=29]
+[ext_resource path="res://peopleButton.gd" type="Script" id=30]
+[ext_resource path="res://SpinBox.gd" type="Script" id=31]
 
 [sub_resource type="TileSet" id=1]
 0/name = "grass"
@@ -54,7 +59,7 @@ flags = 4
 
 [sub_resource type="TileSet" id=3]
 0/name = "vertroad"
-0/texture = ExtResource( 3 )
+0/texture = ExtResource( 4 )
 0/tex_offset = Vector2( 0, 0 )
 0/modulate = Color( 1, 1, 1, 1 )
 0/region = Rect2( 0, 0, 0, 0 )
@@ -64,7 +69,7 @@ flags = 4
 0/shapes = [  ]
 0/z_index = 0
 1/name = "horizroad"
-1/texture = ExtResource( 4 )
+1/texture = ExtResource( 5 )
 1/tex_offset = Vector2( 0, 0 )
 1/modulate = Color( 1, 1, 1, 1 )
 1/region = Rect2( 0, 0, 0, 0 )
@@ -74,7 +79,7 @@ flags = 4
 1/shapes = [  ]
 1/z_index = 0
 2/name = "turn1"
-2/texture = ExtResource( 11 )
+2/texture = ExtResource( 12 )
 2/tex_offset = Vector2( 0, 0 )
 2/modulate = Color( 1, 1, 1, 1 )
 2/region = Rect2( 0, 0, 0, 0 )
@@ -84,7 +89,7 @@ flags = 4
 2/shapes = [  ]
 2/z_index = 0
 3/name = "turn2"
-3/texture = ExtResource( 12 )
+3/texture = ExtResource( 13 )
 3/tex_offset = Vector2( 0, 0 )
 3/modulate = Color( 1, 1, 1, 1 )
 3/region = Rect2( 0, 0, 0, 0 )
@@ -94,7 +99,7 @@ flags = 4
 3/shapes = [  ]
 3/z_index = 0
 4/name = "turn3"
-4/texture = ExtResource( 13 )
+4/texture = ExtResource( 14 )
 4/tex_offset = Vector2( 0, 0 )
 4/modulate = Color( 1, 1, 1, 1 )
 4/region = Rect2( 0, 0, 0, 0 )
@@ -104,7 +109,7 @@ flags = 4
 4/shapes = [  ]
 4/z_index = 0
 5/name = "turn4"
-5/texture = ExtResource( 14 )
+5/texture = ExtResource( 15 )
 5/tex_offset = Vector2( 0, 0 )
 5/modulate = Color( 1, 1, 1, 1 )
 5/region = Rect2( 0, 0, 0, 0 )
@@ -114,7 +119,7 @@ flags = 4
 5/shapes = [  ]
 5/z_index = 0
 6/name = "houses1"
-6/texture = ExtResource( 15 )
+6/texture = ExtResource( 16 )
 6/tex_offset = Vector2( 0, 0 )
 6/modulate = Color( 1, 1, 1, 1 )
 6/region = Rect2( 0, 0, 0, 0 )
@@ -124,7 +129,7 @@ flags = 4
 6/shapes = [  ]
 6/z_index = 0
 7/name = "houses2"
-7/texture = ExtResource( 16 )
+7/texture = ExtResource( 17 )
 7/tex_offset = Vector2( 0, 0 )
 7/modulate = Color( 1, 1, 1, 1 )
 7/region = Rect2( 0, 0, 0, 0 )
@@ -134,7 +139,7 @@ flags = 4
 7/shapes = [  ]
 7/z_index = 0
 8/name = "T1"
-8/texture = ExtResource( 17 )
+8/texture = ExtResource( 18 )
 8/tex_offset = Vector2( 0, 0 )
 8/modulate = Color( 1, 1, 1, 1 )
 8/region = Rect2( 0, 0, 0, 0 )
@@ -144,7 +149,7 @@ flags = 4
 8/shapes = [  ]
 8/z_index = 0
 9/name = "T2"
-9/texture = ExtResource( 18 )
+9/texture = ExtResource( 19 )
 9/tex_offset = Vector2( 0, 0 )
 9/modulate = Color( 1, 1, 1, 1 )
 9/region = Rect2( 0, 0, 0, 0 )
@@ -154,7 +159,7 @@ flags = 4
 9/shapes = [  ]
 9/z_index = 0
 10/name = "T3"
-10/texture = ExtResource( 5 )
+10/texture = ExtResource( 6 )
 10/tex_offset = Vector2( 0, 0 )
 10/modulate = Color( 1, 1, 1, 1 )
 10/region = Rect2( 0, 0, 0, 0 )
@@ -164,7 +169,7 @@ flags = 4
 10/shapes = [  ]
 10/z_index = 0
 11/name = "T4"
-11/texture = ExtResource( 6 )
+11/texture = ExtResource( 7 )
 11/tex_offset = Vector2( 0, 0 )
 11/modulate = Color( 1, 1, 1, 1 )
 11/region = Rect2( 0, 0, 0, 0 )
@@ -174,7 +179,7 @@ flags = 4
 11/shapes = [  ]
 11/z_index = 0
 12/name = "Intersection"
-12/texture = ExtResource( 7 )
+12/texture = ExtResource( 8 )
 12/tex_offset = Vector2( 0, 0 )
 12/modulate = Color( 1, 1, 1, 1 )
 12/region = Rect2( 0, 0, 0, 0 )
@@ -194,7 +199,7 @@ flags = 4
 13/shapes = [  ]
 13/z_index = 0
 14/name = "Factory"
-14/texture = ExtResource( 8 )
+14/texture = ExtResource( 9 )
 14/tex_offset = Vector2( 0, 0 )
 14/modulate = Color( 1, 1, 1, 1 )
 14/region = Rect2( 0, 0, 0, 0 )
@@ -204,7 +209,7 @@ flags = 4
 14/shapes = [  ]
 14/z_index = 0
 15/name = "Store"
-15/texture = ExtResource( 9 )
+15/texture = ExtResource( 10 )
 15/tex_offset = Vector2( 0, 0 )
 15/modulate = Color( 1, 1, 1, 1 )
 15/region = Rect2( 0, 0, 0, 0 )
@@ -214,7 +219,7 @@ flags = 4
 15/shapes = [  ]
 15/z_index = 0
 16/name = "apartments"
-16/texture = ExtResource( 10 )
+16/texture = ExtResource( 11 )
 16/tex_offset = Vector2( 0, 0 )
 16/modulate = Color( 1, 1, 1, 1 )
 16/region = Rect2( 0, 0, 0, 0 )
@@ -225,7 +230,24 @@ flags = 4
 16/z_index = 0
 
 [sub_resource type="DynamicFont" id=4]
-font_data = ExtResource( 20 )
+font_data = ExtResource( 21 )
+
+[sub_resource type="NoiseTexture" id=5]
+
+[sub_resource type="Gradient" id=6]
+offsets = PoolRealArray( 0, 0.5, 1 )
+colors = PoolColorArray( 0.137255, 0.764706, 0.0196078, 1, 0.945098, 0.964706, 0.0196078, 1, 0.905882, 0.027451, 0.027451, 1 )
+
+[sub_resource type="GradientTexture" id=7]
+gradient = SubResource( 6 )
+
+[sub_resource type="StyleBoxTexture" id=8]
+texture = SubResource( 7 )
+normal_map = SubResource( 5 )
+region_rect = Rect2( 0, 0, 2048, 1 )
+
+[sub_resource type="StyleBoxFlat" id=9]
+bg_color = Color( 0.25098, 0.25098, 0.294118, 1 )
 
 [node name="Root" type="Node"]
 script = ExtResource( 1 )
@@ -235,15 +257,17 @@ tile_set = SubResource( 1 )
 cell_size = Vector2( 32, 32 )
 format = 1
 tile_data = PoolIntArray( 0, 0, 0, 1, 0, 0, 2, 0, 0, 3, 0, 0, 4, 0, 0, 5, 0, 0, 6, 0, 0, 7, 0, 0, 8, 0, 0, 9, 0, 0, 10, 0, 0, 11, 0, 0, 12, 0, 0, 13, 0, 0, 14, 0, 0, 15, 0, 0, 65536, 0, 0, 65537, 0, 0, 65538, 0, 0, 65539, 0, 0, 65540, 0, 0, 65541, 0, 0, 65542, 0, 0, 65543, 0, 0, 65544, 0, 0, 65545, 0, 0, 65546, 0, 0, 65547, 0, 0, 65548, 0, 0, 65549, 0, 0, 65550, 0, 0, 65551, 0, 0, 131072, 0, 0, 131073, 0, 0, 131074, 0, 0, 131075, 0, 0, 131076, 0, 0, 131077, 0, 0, 131078, 0, 0, 131079, 0, 0, 131080, 0, 0, 131081, 0, 0, 131082, 0, 0, 131083, 0, 0, 131084, 0, 0, 131085, 0, 0, 131086, 0, 0, 131087, 0, 0, 196608, 0, 0, 196609, 0, 0, 196610, 0, 0, 196611, 0, 0, 196612, 0, 0, 196613, 0, 0, 196614, 0, 0, 196615, 0, 0, 196616, 0, 0, 196617, 0, 0, 196618, 0, 0, 196619, 0, 0, 196620, 0, 0, 196621, 0, 0, 196622, 0, 0, 196623, 0, 0, 262144, 0, 0, 262145, 0, 0, 262146, 0, 0, 262147, 0, 0, 262148, 0, 0, 262149, 0, 0, 262150, 0, 0, 262151, 0, 0, 262152, 0, 0, 262153, 0, 0, 262154, 0, 0, 262155, 0, 0, 262156, 0, 0, 262157, 0, 0, 262158, 0, 0, 262159, 0, 0, 327680, 0, 0, 327681, 0, 0, 327682, 0, 0, 327683, 0, 0, 327684, 0, 0, 327685, 0, 0, 327686, 0, 0, 327687, 0, 0, 327688, 0, 0, 327689, 0, 0, 327690, 0, 0, 327691, 0, 0, 327692, 0, 0, 327693, 0, 0, 327694, 0, 0, 327695, 0, 0, 393216, 0, 0, 393217, 0, 0, 393218, 0, 0, 393219, 0, 0, 393220, 0, 0, 393221, 0, 0, 393222, 0, 0, 393223, 0, 0, 393224, 0, 0, 393225, 0, 0, 393226, 0, 0, 393227, 0, 0, 393228, 0, 0, 393229, 0, 0, 393230, 0, 0, 393231, 0, 0, 458752, 0, 0, 458753, 0, 0, 458754, 0, 0, 458755, 0, 0, 458756, 0, 0, 458757, 0, 0, 458758, 0, 0, 458759, 0, 0, 458760, 0, 0, 458761, 0, 0, 458762, 0, 0, 458763, 0, 0, 458764, 0, 0, 458765, 0, 0, 458766, 0, 0, 458767, 0, 0, 524288, 0, 0, 524289, 0, 0, 524290, 0, 0, 524291, 0, 0, 524292, 0, 0, 524293, 0, 0, 524294, 0, 0, 524295, 0, 0, 524296, 0, 0, 524297, 0, 0, 524298, 0, 0, 524299, 0, 0, 524300, 0, 0, 524301, 0, 0, 524302, 0, 0, 524303, 0, 0, 589824, 0, 0, 589825, 0, 0, 589826, 0, 0, 589827, 0, 0, 589828, 0, 0, 589829, 0, 0, 589830, 0, 0, 589831, 0, 0, 589832, 0, 0, 589833, 0, 0, 589834, 1, 0, 589835, 0, 0, 589836, 0, 0, 589837, 0, 0, 589838, 0, 0, 589839, 0, 0, 655360, 0, 0, 655361, 0, 0, 655362, 0, 0, 655363, 0, 0, 655364, 0, 0, 655365, 0, 0, 655366, 0, 0, 655367, 0, 0, 655368, 0, 0, 655369, 0, 0, 655370, 0, 0, 655371, 0, 0, 655372, 0, 0, 655373, 0, 0, 655374, 0, 0, 655375, 0, 0, 720896, 0, 0, 720897, 0, 0, 720898, 0, 0, 720899, 0, 0, 720900, 0, 0, 720901, 0, 0, 720902, 0, 0, 720903, 0, 0, 720904, 0, 0, 720905, 0, 0, 720906, 0, 0, 720907, 0, 0, 720908, 0, 0, 720909, 0, 0, 720910, 0, 0, 720911, 0, 0, 786432, 0, 0, 786433, 0, 0, 786434, 0, 0, 786435, 0, 0, 786436, 0, 0, 786437, 0, 0, 786438, 0, 0, 786439, 0, 0, 786440, 0, 0, 786441, 0, 0, 786442, 0, 0, 786443, 0, 0, 786444, 0, 0, 786445, 0, 0, 786446, 0, 0, 786447, 0, 0, 851968, 0, 0, 851969, 0, 0, 851970, 0, 0, 851971, 0, 0, 851972, 0, 0, 851973, 0, 0, 851974, 0, 0, 851975, 0, 0, 851976, 0, 0, 851977, 0, 0, 851978, 0, 0, 851979, 0, 0, 851980, 0, 0, 851981, 0, 0, 851982, 0, 0, 851983, 0, 0, 917504, 0, 0, 917505, 0, 0, 917506, 0, 0, 917507, 0, 0, 917508, 0, 0, 917509, 0, 0, 917510, 0, 0, 917511, 0, 0, 917512, 0, 0, 917513, 0, 0, 917514, 0, 0, 917515, 0, 0, 917516, 0, 0, 917517, 0, 0, 917518, 0, 0, 917519, 0, 0, 983040, 0, 0, 983041, 0, 0, 983042, 0, 0, 983043, 0, 0, 983044, 0, 0, 983045, 0, 0, 983046, 0, 0, 983047, 0, 0, 983048, 0, 0, 983049, 0, 0, 983050, 0, 0, 983051, 0, 0, 983052, 0, 0, 983053, 0, 0, 983054, 0, 0, 983055, 0, 0 )
+script = ExtResource( 3 )
 
 [node name="propertiles" type="TileMap" parent="."]
 tile_set = SubResource( 3 )
 cell_size = Vector2( 32, 32 )
 format = 1
 tile_data = PoolIntArray( 6, 6, 0, 7, 6, 0, 8, 6, 0, 65539, 1, 0, 65540, 1, 0, 65541, 1, 0, 65542, 1, 0, 65543, 1, 0, 65544, 1, 0, 65545, 3, 0, 65548, 2, 0, 131078, 6, 0, 131079, 6, 0, 131080, 6, 0, 131081, 0, 0, 131084, 0, 0, 131091, 14, 0, 196610, 16, 0, 196611, 16, 0, 196615, 16, 0, 196616, 16, 0, 196617, 0, 0, 196620, 0, 0, 262145, 16, 0, 262146, 2, 0, 262147, 1, 0, 262148, 1, 0, 262149, 1, 0, 262150, 1, 0, 262151, 1, 0, 262152, 3, 0, 262153, 0, 0, 262155, 15, 0, 262156, 0, 0, 327681, 15, 0, 327682, 0, 0, 327688, 11, 0, 327689, 9, 0, 327690, 1, 0, 327691, 1, 0, 327692, 10, 0, 393217, 16, 0, 393218, 0, 0, 393224, 0, 0, 393226, 15, 0, 393227, 15, 0, 393228, 0, 0, 458753, 2, 0, 458754, 9, 0, 458755, 1, 0, 458756, 1, 0, 458757, 1, 0, 458758, 1, 0, 458759, 1, 0, 458760, 4, 0, 458764, 0, 0, 458765, 14, 0, 524289, 0, 0, 524291, 16, 0, 524292, 15, 0, 524293, 15, 0, 524294, 16, 0, 524295, 16, 0, 524300, 0, 0, 589825, 0, 0, 589834, 14, 0, 589836, 0, 0, 589839, 15, 0, 655361, 0, 0, 655362, 6, 0, 655363, 6, 0, 655364, 6, 0, 655365, 6, 0, 655366, 6, 0, 655367, 6, 0, 655372, 11, 0, 655373, 1, 0, 655374, 1, 0, 655375, 1, 0, 720896, 6, 0, 720897, 11, 0, 720898, 1, 0, 720899, 1, 0, 720900, 1, 0, 720901, 1, 0, 720902, 1, 0, 720903, 3, 0, 720904, 6, 0, 720908, 0, 0, 720909, 14, 0, 786432, 6, 0, 786433, 0, 0, 786439, 0, 0, 786440, 6, 0, 786442, 14, 0, 786444, 0, 0, 851968, 6, 0, 851969, 5, 0, 851970, 1, 0, 851971, 1, 0, 851972, 1, 0, 851973, 1, 0, 851974, 1, 0, 851975, 4, 0, 851976, 6, 0, 851980, 0, 0, 917505, 6, 0, 917506, 6, 0, 917507, 6, 0, 917508, 6, 0, 917509, 6, 0, 917510, 6, 0, 917511, 6, 0, 917516, 0, 0, 983052, 0, 0, 1114123, 1, 0, 1114125, 1, 0, 1114129, 1, 0 )
-script = ExtResource( 19 )
+script = ExtResource( 20 )
 
 [node name="TurnCounterBox" type="ColorRect" parent="."]
+editor/display_folded = true
 margin_right = 66.0
 margin_bottom = 25.0
 color = Color( 0, 0, 0, 1 )
@@ -264,6 +288,7 @@ margin_bottom = 46.0
 text = "1"
 
 [node name="BottomDialog" type="ColorRect" parent="."]
+editor/display_folded = true
 margin_top = 512.0
 margin_right = 512.0
 margin_bottom = 600.0
@@ -278,7 +303,7 @@ margin_bottom = 87.0
 custom_fonts/normal_font = SubResource( 4 )
 bbcode_enabled = true
 scroll_active = false
-script = ExtResource( 21 )
+script = ExtResource( 22 )
 
 [node name="ColorRect" type="ColorRect" parent="."]
 margin_left = 512.0
@@ -291,7 +316,7 @@ margin_left = 18.0
 margin_top = 17.0
 margin_right = 159.0
 margin_bottom = 581.0
-script = ExtResource( 21 )
+script = ExtResource( 22 )
 
 [node name="ColorRect" type="ColorRect" parent="ColorRect"]
 margin_left = 8.0
@@ -299,44 +324,197 @@ margin_top = 8.0
 margin_right = 170.0
 margin_bottom = 592.0
 
+[node name="HappinessMeter" type="ColorRect" parent="."]
+editor/display_folded = true
+margin_left = 525.0
+margin_top = 416.196
+margin_right = 677.0
+margin_bottom = 450.0
+color = Color( 0.243137, 0.231373, 0.27451, 1 )
+
+[node name="ProgressBar" type="ProgressBar" parent="HappinessMeter"]
+margin_left = 40.0
+margin_top = 3.0
+margin_right = 149.0
+margin_bottom = 31.0
+custom_styles/fg = SubResource( 8 )
+custom_styles/bg = SubResource( 9 )
+step = 10.0
+value = 80.0
+rounded = true
+percent_visible = false
+
+[node name="TextureRect" type="TextureRect" parent="HappinessMeter"]
+margin_left = 2.09503
+margin_top = 0.698334
+margin_right = 35.095
+margin_bottom = 34.6983
+texture = ExtResource( 23 )
+
 [node name="EndTurnButton" type="Button" parent="."]
-margin_left = 523.0
-margin_top = 12.0
-margin_right = 678.0
-margin_bottom = 64.0
+margin_left = 525.0
+margin_top = 19.0
+margin_right = 677.0
+margin_bottom = 71.0
 text = "End Turn"
-script = ExtResource( 22 )
+script = ExtResource( 24 )
+
+[node name="NewsButton" type="Button" parent="."]
+editor/display_folded = true
+margin_left = 525.0
+margin_top = 358.0
+margin_right = 677.0
+margin_bottom = 410.0
+text = "News Censorship"
+script = ExtResource( 25 )
+
+[node name="NewsHint" type="ColorRect" parent="NewsButton"]
+editor/display_folded = true
+visible = false
+margin_left = -168.0
+margin_top = -2.0
+margin_right = -16.0
+margin_bottom = 52.0
+color = Color( 0.152941, 0.152941, 0.176471, 1 )
+
+[node name="RichTextLabel" type="RichTextLabel" parent="NewsButton/NewsHint"]
+margin_left = 1.58667
+margin_top = 4.4133
+margin_right = 154.587
+margin_bottom = 68.4133
+text = "Control how much your citizens know about the disaster"
+
+[node name="CheckList" type="Button" parent="NewsButton"]
+editor/display_folded = true
+visible = false
+margin_top = 52.0
+margin_right = 152.0
+margin_bottom = 158.0
+disabled = true
+
+[node name="0" type="CheckBox" parent="NewsButton/CheckList"]
+margin_left = 8.0
+margin_top = 15.0
+margin_right = 136.0
+margin_bottom = 45.0
+text = "Media Blackout"
+script = ExtResource( 26 )
+
+[node name="1" type="CheckBox" parent="NewsButton/CheckList"]
+margin_left = 8.0
+margin_top = 37.0
+margin_right = 136.0
+margin_bottom = 67.0
+text = "Limited Info"
+script = ExtResource( 26 )
+
+[node name="2" type="CheckBox" parent="NewsButton/CheckList"]
+margin_left = 8.0
+margin_top = 58.0
+margin_right = 136.0
+margin_bottom = 88.0
+text = "Full Disclosure"
+script = ExtResource( 26 )
+
+[node name="FortifyBuilding" type="Button" parent="."]
+editor/display_folded = true
+margin_left = 525.0
+margin_top = 235.0
+margin_right = 677.0
+margin_bottom = 287.0
+text = "Fortify Buildings"
+script = ExtResource( 27 )
+
+[node name="PopupDialog2" type="PopupDialog" parent="FortifyBuilding"]
+margin_left = -166.0
+margin_top = -2.0
+margin_right = -13.0
+margin_bottom = 52.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="FortifyBuilding/PopupDialog2"]
+margin_left = 7.0
+margin_top = 10.0
+margin_right = 196.0
+margin_bottom = 71.0
+text = "Increase a building's structural integrity"
+
+[node name="StripResources" type="Button" parent="."]
+editor/display_folded = true
+margin_left = 525.0
+margin_top = 296.0
+margin_right = 677.0
+margin_bottom = 348.0
+text = "Strip Resources"
+script = ExtResource( 28 )
+
+[node name="PopupDialog3" type="PopupDialog" parent="StripResources"]
+margin_left = -196.0
+margin_top = -5.0
+margin_right = -11.0
+margin_bottom = 58.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="StripResources/PopupDialog3"]
+margin_left = 7.0
+margin_top = 10.0
+margin_right = 196.0
+margin_bottom = 71.0
+text = "Compromise a building's structural integrity to gain resources"
 
 [node name="ResButton" type="Button" parent="."]
+editor/display_folded = true
 margin_left = 525.0
-margin_top = 78.0
+margin_top = 81.0
 margin_right = 677.0
-margin_bottom = 146.0
+margin_bottom = 149.0
 text = "Move Resources"
-script = ExtResource( 23 )
+script = ExtResource( 29 )
+
+[node name="PopupDialog" type="PopupDialog" parent="ResButton"]
+margin_left = -198.0
+margin_top = -4.0
+margin_right = -13.0
+margin_bottom = 75.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="ResButton/PopupDialog"]
+margin_left = 7.0
+margin_top = 10.0
+margin_right = 196.0
+margin_bottom = 71.0
+text = "Once you have a building selected, press this button to choose a destination to move resources"
 
 [node name="peopleButton" type="Button" parent="."]
+editor/display_folded = true
 margin_left = 525.0
 margin_top = 157.0
 margin_right = 677.0
 margin_bottom = 225.0
-text = "Move Resources"
-script = ExtResource( 24 )
+text = "Move People"
+script = ExtResource( 30 )
 
-[node name="SpinBox" type="SpinBox" parent="."]
+[node name="PopupDialog2" type="PopupDialog" parent="peopleButton"]
+margin_left = -198.0
+margin_top = -4.0
+margin_right = -13.0
+margin_bottom = 75.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="peopleButton/PopupDialog2"]
+margin_left = 7.0
+margin_top = 10.0
+margin_right = 196.0
+margin_bottom = 71.0
+text = "Once you have a building selected, press this button to choose a destination to move people"
+
+[node name="MoveResourcesValue" type="SpinBox" parent="."]
 margin_left = 569.0
-margin_top = 122.0
+margin_top = 125.0
 margin_right = 643.0
-margin_bottom = 146.0
-script = ExtResource( 25 )
+margin_bottom = 149.0
+script = ExtResource( 31 )
 
-[node name="AcceptDialog" type="AcceptDialog" parent="."]
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 1.0
-anchor_bottom = 0.5
-popup_exclusive = true
-window_title = "Move Resources"
-dialog_text = "Move resources to this building?"
-script = ExtResource( 26 )
+[node name="MovePeopleValue" type="SpinBox" parent="."]
+margin_left = 569.0
+margin_top = 200.0
+margin_right = 643.0
+margin_bottom = 224.0
+script = ExtResource( 31 )
 
