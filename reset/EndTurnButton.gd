@@ -16,5 +16,5 @@ func _ready():
 #	pass
 
 func _on_pressed():
-	get_parent().emit_signal("end_turn")
+	get_parent().next_turn()
 	pass
