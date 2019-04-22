@@ -26,7 +26,7 @@ func checkbox_clicked(checkbox, value):
 	if checkbox.pressed:
 		for i in range(3):
 			if i != int(checkbox.name):
-				get_child(1).get_child(i).pressed = false
+				get_child(1).get_child(i).pressed = value
 	else:
 		checkbox.pressed = true
 	get_parent().censor_level = int(checkbox.name)

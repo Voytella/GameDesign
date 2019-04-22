@@ -98,6 +98,7 @@ func getScore(surPop, surRes):
 	
 	# display score
 	var iBox = get_node("../BottomDialog/InfoBox")
+	get_node("../BottomDialog/InfoBox2").clear()
 	iBox.clear()
 	iBox.add_text("Months until resources ran out: %d\nNumber of survivors after this critical month: %d" % [month, getMonthScore(surPop, surRes, critMonth)])
 	

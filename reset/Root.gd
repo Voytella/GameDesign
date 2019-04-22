@@ -65,6 +65,7 @@ func _ready():
 			for j in range(16):
 				Grid[i].append(null)
 	for i in range(housecoords.size()):
+		randomize()
 		#var sprite = Sprite.new()
 		var place = housecoords[i]
 		#sprite.texture = house

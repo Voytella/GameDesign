@@ -1,4 +1,4 @@
-[gd_scene load_steps=42 format=2]
+[gd_scene load_steps=43 format=2]
 
 [ext_resource path="res://Root.gd" type="Script" id=1]
 [ext_resource path="res://images/grasstile.png" type="Texture" id=2]
@@ -34,6 +34,7 @@
 [ext_resource path="res://ResButton.gd" type="Script" id=32]
 [ext_resource path="res://peopleButton.gd" type="Script" id=33]
 [ext_resource path="res://SpinBox.gd" type="Script" id=34]
+[ext_resource path="res://Reset Button.gd" type="Script" id=35]
 
 [sub_resource type="TileSet" id=1]
 0/name = "grass"
@@ -285,6 +286,7 @@ tile_data = PoolIntArray( 0, 13, 0, 6, 6, 0, 7, 6, 0, 8, 6, 0, 13, 18, 0, 14, 18
 script = ExtResource( 23 )
 
 [node name="BottomDialog" type="ColorRect" parent="."]
+editor/display_folded = true
 margin_top = 512.0
 margin_right = 512.0
 margin_bottom = 600.0
@@ -565,4 +567,12 @@ margin_top = 200.0
 margin_right = 643.0
 margin_bottom = 224.0
 script = ExtResource( 34 )
+
+[node name="NewGameButton" type="Button" parent="."]
+margin_left = 415.0
+margin_top = 474.0
+margin_right = 507.0
+margin_bottom = 510.0
+text = "New Game"
+script = ExtResource( 35 )
 
