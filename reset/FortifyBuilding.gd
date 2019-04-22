@@ -18,15 +18,11 @@ func _ready():
 #	# Update game logic here.
 #	pass
 
-
-# fortify building
-# function relating integrity to 
-	
 func popup_hint():
 	var popup = get_child(0)
 	if !popup.visible:
 		var x = self.get_rect()
-		x.position = x.position - Vector2(166, 4)
+		x.position -= Vector2(166, 4)
 		x.size = Vector2(153,54)
 		popup.popup(x)
 		#popup.get_child(0).visible = true

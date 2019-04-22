@@ -24,7 +24,7 @@ func popup_hint():
 	var popup = get_child(0)
 	if !popup.visible:
 		var x = self.get_rect()
-		x.position = x.position - Vector2(198, 4)
+		x.position -= Vector2(198, 4)
 		x.size = Vector2(185,63)
 		popup.popup(x)
 		#popup.get_child(0).visible = true

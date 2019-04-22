@@ -5,6 +5,8 @@ var population
 var resources
 var integrity
 var base_upgrade_cost
+var fortified
+var stripped
 
 func _init(typ, cap, pop, res, inte):
 	self.type = typ
@@ -13,6 +15,8 @@ func _init(typ, cap, pop, res, inte):
 	self.resources = res
 	self.integrity = inte * 5
 	self.base_upgrade_cost = (10 * inte) + 100
+	self.fortified = false
+	self.stripped = false
 
 func set_val(cap, pop, res, inte):
 	self.capacity = cap
@@ -37,8 +41,19 @@ func get_type_multiplier():
 		return 1
 	if (self.type == "Appartment Building"):
 		return 5
+	if (self.type == "Stadium"):
+		return 20
+	if (self.type == "Factory"):
+		return 50
+	if (self.type == "Farm"):
+		return 10
+	else:
+		return 0 #error
 
 func fortify():
+	if (fortified):
+		#send already fortified message
+		return
 	if (self.integrity == 100):
 		print("cannot upgrade further")
 		return
@@ -46,18 +61,23 @@ func fortify():
 	var cost = self.base_upgrade_cost * mult
 	if (self.resources > cost):
 		self.resources -= cost
-		self.base_upgrade_cost += 10 * mult
+		self.base_upgrade_cost += 10
 		self.integrity += 5
+		self.fortified = true
 
 func strip():
+	if (stripped):
+		#send already stripped message
+		return
 	if (self.integrity == 0):
 		print("cannot strip further")
 		return
 	var mult = get_type_multiplier()
 	var gain = floor(self.base_upgrade_cost * mult * 0.75)
 	self.resources += gain
-	self.base_upgrade_cost -= 10 * mult
+	self.base_upgrade_cost -= 10
 	self.integrity -= 5
+	self.stripped = true
 	
 func get_upgrade_cost():
 	if (self.integrity == 100):
