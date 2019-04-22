@@ -8,7 +8,7 @@ extends Button
 func _ready():
 	# Called when the node is added to the scene for the first time.
 	# Initialization here
-	connect("pressed",get_parent(),"move_resources")
+	connect("pressed",get_parent(),"fortify")
 	connect("mouse_entered", self, "popup_hint")
 	#connect("mouse_exited", self, "hide_popup")
 	pass
@@ -17,9 +17,10 @@ func _ready():
 #	# Called every frame. Delta is time since last frame.
 #	# Update game logic here.
 #	pass
-	
-func _on_pressed():
-	get_parent().move_resources()
+
+
+# fortify building
+# function relating integrity to 
 	
 func popup_hint():
 	var popup = get_child(0)

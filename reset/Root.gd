@@ -19,17 +19,20 @@ var resource_amount
 var people_amount
 var censor_level
 var total_population
+var total_resources
 var endGame
 
 signal mouse_click
 
 func _ready():
+	randomize()
 	endGame = false
 	maxTurn = floor(rand_range(7,14))
 	turnCount = 1
 	resource_amount = 0
 	people_amount = 0
 	total_population = 0
+	total_resources = 0
 	var propertiles = get_node("propertiles")
 	
 	for i in range(16):
@@ -44,8 +47,9 @@ func _ready():
 		var pop = floor(rand_range(1, 7))
 		total_population = total_population + pop
 		var cap = floor(rand_range(pop, 15))
-		var res = floor(rand_range(cap*5, cap*20))
-		var inte = floor(rand_range(0,50))
+		var res = floor(rand_range(cap*2, cap*10))
+		total_resources = total_resources + res
+		var inte = floor(rand_range(1,10))
 		var building = Building.new("House", cap, pop, res, inte)
 		Grid[place[0]][place[1]] = building
 
@@ -54,12 +58,14 @@ func _ready():
 		var pop = floor(rand_range(80, 200))
 		total_population = total_population + pop
 		var cap = floor(rand_range(pop, 300))
-		var res = floor(rand_range(cap*5, cap*15))
-		var inte = floor(rand_range(0,60))
+		var res = floor(rand_range(cap*2, cap*10))
+		total_resources = total_resources + res
+		var inte = floor(rand_range(1,12))
 		var building = Building.new("Appartment Building", cap, pop, res, inte)
 		Grid[place[0]][place[1]] = building
 
 	print("Population:", total_population)
+	print("Resources:", total_resources)
 	pass
 
 func _process(delta):
@@ -75,11 +81,11 @@ func buildings(x, y):
 			var cap = selected.get_capacity()
 			var res = selected.get_resources()
 			var inte = selected.get_integrity()
-			print(selected.invested_resources)
+			#print(selected.invested_resources)
 			var iBox = get_node("BottomDialog/InfoBox")
 			iBox.clear()
 			iBox.add_text("%s at (%d, %d)\n" % [selected.type,x,y])
-			iBox.add_text("Population: %d\tMaximum Capacity: %d\nResource: %d\tIntegrity: %d" % [pop, cap, res, inte])
+			iBox.add_text("Population: %d\tMaximum Capacity: %d\nResource: %d\tIntegrity: %d\nFortification Cost: %s\tStrip Gain: %s" % [pop, cap, res, inte, selected.get_upgrade_cost(), selected.get_strip_gain()])
 	pass
 
 func next_turn():
@@ -100,6 +106,16 @@ func change_resource_amount(value, res):
 		resource_amount = value
 	else:
 		people_amount = value
+
+func fortify():
+	if (selected != null):
+		selected.fortify()
+		buildings(selected_coordinates[0], selected_coordinates[1])
+		
+func strip():
+	if (selected != null):
+		selected.strip()
+		buildings(selected_coordinates[0], selected_coordinates[1])
 
 func move_resources():
 	if (selected != null):
