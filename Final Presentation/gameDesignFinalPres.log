@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/MacPorts 2017_3) (preloaded format=pdflatex 2018.5.11)  24 APR 2019 14:01
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/MacPorts 2017_3) (preloaded format=pdflatex 2018.5.11)  24 APR 2019 14:09
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -870,16 +870,27 @@ LaTeX Font Warning: Font shape `OT1/cmss/m/n' in size <4> not available
 
 [1{/opt/local/var/db/texmf/fonts/map/pdftex/updmap/pdftex.map}
 
-] [2
+]
+<gameBoard.png, id=81, 386.44376pt x 336.25626pt>
+File: gameBoard.png Graphic file (type png)
+ <use gameBoard.png>
+Package pdftex.def Info: gameBoard.png used on input line 33.
+(pdftex.def)             Requested size: 190.89568pt x 166.10616pt.
 
-] [3
+Overfull \hbox (5.0pt too wide) in paragraph at lines 33--33
+ [] 
+ []
+
+[2
+
+ <./gameBoard.png>] [3
 
 ]
-<Photos/Buttons.png, id=142, 127.07475pt x 442.65375pt>
+<Photos/Buttons.png, id=145, 127.07475pt x 442.65375pt>
 File: Photos/Buttons.png Graphic file (type png)
 
 <use Photos/Buttons.png>
-Package pdftex.def Info: Photos/Buttons.png used on input line 58.
+Package pdftex.def Info: Photos/Buttons.png used on input line 64.
 (pdftex.def)             Requested size: 50.829pt x 177.05835pt.
  [4
 
@@ -897,12 +908,12 @@ Package pdftex.def Info: Photos/Buttons.png used on input line 58.
 \tf@snm=\write8
 \openout8 = `gameDesignFinalPres.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 79.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 79.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 85.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 85.
 
 (./gameDesignFinalPres.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 79.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 79.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 85.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 85.
 Package rerunfilecheck Info: File `gameDesignFinalPres.out' has not changed.
 (rerunfilecheck)             Checksum: 37133E683192AD3B3A15B984D4B2A011;211.
 
@@ -912,20 +923,20 @@ LaTeX Font Warning: Size substitutions with differences
 
  ) 
 Here is how much of TeX's memory you used:
- 17121 strings out of 494936
- 326135 string characters out of 6180785
+ 17126 strings out of 494936
+ 326219 string characters out of 6180785
  396536 words of memory out of 5000000
- 20023 multiletter control sequences out of 15000+600000
+ 20027 multiletter control sequences out of 15000+600000
  5758 words of font info for 21 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  48i,16n,57p,785b,557s stack positions out of 5000i,500n,10000p,200000b,80000s
 </opt/local/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmss10.pfb></o
 pt/local/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmss12.pfb></opt/lo
 cal/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmss8.pfb>
-Output written on gameDesignFinalPres.pdf (6 pages, 84937 bytes).
+Output written on gameDesignFinalPres.pdf (6 pages, 531601 bytes).
 PDF statistics:
- 253 PDF objects out of 1000 (max. 8388607)
+ 255 PDF objects out of 1000 (max. 8388607)
  227 compressed objects within 3 object streams
  18 named destinations out of 1000 (max. 500000)
- 112 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 117 words of extra memory for PDF output out of 10000 (max. 10000000)
 
