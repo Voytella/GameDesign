@@ -1,5 +1,5 @@
-\beamer@sectionintoc {1}{Section no. 1}{2}{0}{1}
-\beamer@sectionintoc {2}{Section no. 2}{3}{0}{2}
-\beamer@sectionintoc {3}{Section no. 3}{4}{0}{3}
-\beamer@sectionintoc {4}{Section no. 4}{5}{0}{4}
-\beamer@sectionintoc {5}{Section no. 4}{6}{0}{5}
+\beamer@sectionintoc {1}{Game Type}{2}{0}{1}
+\beamer@sectionintoc {2}{Story}{3}{0}{2}
+\beamer@sectionintoc {3}{Gameplay}{4}{0}{3}
+\beamer@sectionintoc {4}{Buildings}{5}{0}{4}
+\beamer@sectionintoc {5}{Score}{6}{0}{5}

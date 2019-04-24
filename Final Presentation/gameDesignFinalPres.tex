@@ -1,14 +1,22 @@
 \documentclass{beamer}
+
+\usepackage{graphicx}
+\usepackage{outlines}
+\usepackage{multicol}
+
+\usetheme{PaloAlto}
+\usecolortheme{whale}
+
 \begin{document}
 \title{Simple Beamer Class}   
-\author{Ryan Wojtyla, Eric Pereira, Josef Bostik, Thomas van Haastrecht} 
+\author[]{Ryan Wojtyla, Eric Pereira, Josef Bostik, Thomas van Haastrecht} 
 \date{\today} 
 
 \frame{\titlepage} 
 
 
 
-\section{Section no. 1} 
+\section{Game Type} 
 \frame{\frametitle{Game type}
 \begin{itemize}
 \item Turn based
@@ -18,34 +26,44 @@
 \end{itemize} 
 }
 
-\section{Section no. 2} 
+\section{Story} 
 \frame{\frametitle{Story}
 \begin{itemize}
 \item The world is ending in nuclear fire and your job is to keep your citizens safe. To do this, you need to reallocate resources and fortify buildings while choosing whether or not to tell your citizens of their impending doom. However, you don't have much time, and you need to do your best to avoid panic.
 \end{itemize} 
 }
 
-\section{Section no. 3} 
-\frame{\frametitle{Gameplay}
-\begin{itemize}
-\item Reallocate resources and people
-\item Designate key buildings
-\item Fortify key buildings
-\item Get the highest score possible!
-\end{itemize} 
-}
+\section{Gameplay} 
+	\frame{\frametitle{Gameplay}
+	\begin{multicols}{2}
 
-\section{Section no. 4} 
+		\begin{outline}
+			\1 Reallocate resources and people
+			\1 Designate key buildings
+			\1 Fortify key buildings
+			\1 Get the highest score possible!
+		\end{outline}
+	
+	\columnbreak 
+
+	\begin{center}
+		\includegraphics[scale=0.45]{Photos/Buttons.png}
+	\end{center}
+	
+	\end{multicols}
+}
+\section{Buildings} 
 \frame{\frametitle{Buildings}
 \begin{itemize}
 \item Stadium - High cost to fortify, but offers a high population capacity
 \item Factory - Good for starting resources, and has a high base integrity. 
 \item Apartment - Low upgrade cost, decent population capacity, and also good for starting resources
 \item House - Easy to upgrade, but doesn't offer much else. Good for the early game.
+\item Farm - Difficult to upgrade, but offers more resources, beneficial for end game. 
 \end{itemize} 
 }
 
-\section{Section no. 4} 
+\section{Score} 
 \frame{\frametitle{Score}
 \begin{itemize}
 \item Population - Saving as many people as possible is the ultimate goal
