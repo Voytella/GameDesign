@@ -43,11 +43,11 @@ func getTotRes(buildingList):
 	return totRes
 
 # get the total amount of remaining resources and population
-func getSurviving():
+func getSurviving(totPop):
 	var survived = getSurvived(getAllBuildings())
 	var surPop = getTotPop(survived)
 	var surRes = getTotRes(survived)
-	getScore(surPop, surRes)
+	getScore(surPop, surRes, totPop)
 	return
 
 # How many people died?	
@@ -86,7 +86,7 @@ func getMonthScore(surPop, surRes, months):
 	return surPop - numDeaths(surPop, surRes, months)
 	
 # get the number of the critical month and the number of surviors after
-func getScore(surPop, surRes):
+func getScore(surPop, surRes, totPop):
 	var month = 0
 	
 	# see how many months pass without incident
@@ -100,5 +100,5 @@ func getScore(surPop, surRes):
 	var iBox = get_node("../BottomDialog/InfoBox")
 	get_node("../BottomDialog/InfoBox2").clear()
 	iBox.clear()
-	iBox.add_text("Months until resources ran out: %d\nNumber of survivors after this critical month: %d" % [month, getMonthScore(surPop, surRes, critMonth)])
+	iBox.add_text("Initial Survivors: %d/%d\nMonths survived: %d\nRemaining Survivors: %d" % [surPop, totPop, month, getMonthScore(surPop, surRes, critMonth)])
 	

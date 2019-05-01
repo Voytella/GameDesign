@@ -228,7 +228,7 @@ func next_turn():
 					j.stripped = false
 		return
 	endGame = true
-	get_child(0).getSurviving()
+	get_child(0).getSurviving(total_population)
 	pass
 
 func change_resource_amount(value, res):
