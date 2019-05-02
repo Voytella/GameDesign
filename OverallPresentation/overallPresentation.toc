@@ -1,0 +1,9 @@
+\beamer@sectionintoc {1}{Origins}{2}{0}{1}
+\beamer@sectionintoc {2}{Game Engine}{4}{0}{2}
+\beamer@sectionintoc {3}{Foundations}{6}{0}{3}
+\beamer@sectionintoc {4}{Pieces}{7}{0}{4}
+\beamer@subsectionintoc {4}{1}{Population}{7}{0}{4}
+\beamer@subsectionintoc {4}{2}{Resources}{8}{0}{4}
+\beamer@subsectionintoc {4}{3}{Buildings}{9}{0}{4}
+\beamer@sectionintoc {5}{Score}{11}{0}{5}
+\beamer@subsectionintoc {5}{1}{Building Integrity}{11}{0}{5}

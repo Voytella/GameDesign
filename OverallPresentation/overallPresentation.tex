@@ -1,0 +1,322 @@
+\documentclass[aspectratio=169]{beamer}
+
+\usepackage{graphicx}
+\usepackage{outlines}
+\usepackage{multicol}
+
+\usetheme{PaloAlto}
+\usecolortheme{whale}
+
+\addtobeamertemplate{footline}
+{%
+  \usebeamercolor[fg]{title in sidebar}
+  \vskip-1cm\hskip10pt
+  \insertframenumber\,/\,\inserttotalframenumber\kern1em\vskip2pt%
+}
+
+\begin{document}
+
+%----------BEGIN TITLE----------
+
+\title{Nuclear War City Simulator 2019 Xtreme Edition XXL}
+\author[]{Josef Bostik \\
+  Thomas van Haastrecht \\
+  Eric Pereira \\
+  Ryan Wojtyla}
+\date{\today}
+
+\begin{frame}
+  \titlepage
+\end{frame}
+
+%-----------END TITLE-----------
+
+\section{Origins}
+
+%----------BEGIN ORIGINS----------
+
+\begin{frame}
+
+  \frametitle{Initial Ruminations}
+
+  \begin{center}
+    \includegraphics[scale=0.5]{../Diagrams/Game/Game.png}
+  \end{center}
+
+\end{frame}
+
+%-----------END ORIGINS-----------
+
+%----------BEGIN KIND OF GAME----------
+
+\begin{frame}
+
+  \frametitle{Settlement}
+
+  \begin{multicols}{2}
+
+  \begin{outline}
+    \1 turn-based strategy
+    \1 2D grid
+    \1 rogue-like
+      \2 short
+      \2 procedurally generated (we hope)
+      \2 high replayability
+  \end{outline}
+
+  \columnbreak
+
+  \begin{center}
+    \includegraphics[scale=0.3]{../Images/civLogo.png}
+  \end{center}
+
+  \begin{center}
+    \includegraphics[scale=0.25]{../Images/FTLLogo.png}
+  \end{center}
+
+  \end{multicols}
+
+\end{frame}
+
+%-----------END KIND OF GAME-----------
+
+\section{Game Engine}
+
+%----------BEGIN GAME ENGINE----------
+
+\begin{frame}
+
+  \frametitle{Game Engine}
+
+  \begin{center}
+    \includegraphics[scale=0.7]{../Diagrams/GameEngine/GameEngine.png}
+  \end{center}
+
+\end{frame}
+
+%-----------END GAME ENGINE-----------
+
+%----------BEGIN USING GODOT----------
+
+\begin{frame}
+
+  \frametitle{Working with Godot}
+
+  \begin{outline}
+    \1 Steep initial learning curve
+    \1 Official Godot documentation is expansive, but it lacks examples.
+    \1 Community tutorials are more example-based.
+    \1 Recent updates have obsolesced a significant portion of provided
+    community support.
+      \2 solutions for the old system
+  \end{outline}
+
+  \vspace*{1cm}
+
+  \begin{outline}
+    \1 The learning curve soon plateaus.
+    \1 The native scripting language, GDScript, is nice to use.
+    \1 An extensive collection of objects is provided.
+  \end{outline}
+
+\end{frame}
+
+%-----------END USING GODOT-----------
+
+\section{Foundations}
+
+%----------BEGIN PREMISE----------
+
+\begin{frame}
+
+  \frametitle{Story}
+
+  \begin{center}
+    {\Large Prepare for imminent global thermonuclear war!}
+  \end{center}
+
+  \begin{outline}
+    \1 Ensure the survival of as many of your citizens as possible.
+    \1 Pacify the masses.
+    \1 Manage resources.
+    \1 Modify infrastructure.
+  \end{outline}
+
+  \begin{center}
+    \includegraphics[scale=0.15, trim=6cm 0 0 6cm]{../Images/nuclear.png}
+    \includegraphics[width=0.35\textwidth, trim=0 0 4cm 6cm]{../Images/board.png}
+  \end{center}
+
+\end{frame}
+
+%-----------END PREMISE-----------
+
+\section{Pieces}
+
+\subsection{Population}
+
+%----------BEGIN POPULATION----------
+
+\begin{frame}
+
+  \frametitle{Population}
+
+  \begin{center}
+    {\large Who really wants to live anyway?}
+  \end{center}
+
+  \begin{outline}
+    \1 Choose whether or not to keep your citizens informed.
+    \1 Relocate your citizens.
+    \1 Don't push them too hard!
+    \1 Keep them happy.
+  \end{outline}
+
+  \begin{center}
+    \includegraphics[scale=2.0]{../reset/images/happiness.png}
+  \end{center}
+
+\end{frame}
+
+%-----------END POPULATION-----------
+
+\subsection{Resources}
+
+%----------BEGIN RESOURCES----------
+
+\begin{frame}
+
+  \frametitle{Resources}
+
+  \begin{center}
+    {\large Everything needed to keep your citizens alive.}
+  \end{center}
+
+  \begin{outline}
+    \1 Optimize the distribution and allocation of limited critical resources.
+    \1 Maintain citizen complacency to ensure swift movement of supplies.  
+    \1 Plan for the future.
+  \end{outline}
+
+  \begin{center}
+    \includegraphics[scale=3.0]{../Images/factory.png}
+  \end{center}
+
+\end{frame}
+
+%-----------END RESOURCES-----------
+
+\subsection{Buildings}
+
+%----------BEGIN BUILDINGS OVERVIEW----------
+
+\begin{frame}
+
+  \frametitle{Buildings - Overview}
+
+  \begin{center}
+    {\large Safe haven or gravestone?}
+  \end{center}
+
+  %\begin{multicols}{2}
+
+  \begin{outline}
+    \1 Buildings play several unique and critical roles within the city.
+    \1 Store resources.
+    \1 Maintain buildings to help keep the peace.
+    \1 Fortify buildings to increase their chance of survival.
+    \1 Production buildings can aid the surviving population.
+  \end{outline}
+
+  %\columnbreak
+
+  %\begin{center}
+  %  \includegraphics[scale=0.34, trim=4cm 0 4.5cm
+  %  0]{../Diagrams/Buildings/Buildings.png}
+  %\end{center}
+
+  %\end{multicols}
+
+\end{frame}
+
+%-----------END BUILDINGS OVERVIEW-----------
+
+%----------BEGIN BUILDINGS TYPES----------
+
+\begin{frame}
+
+  \frametitle{Buildings - Types}
+
+  \begin{itemize}
+  \item \textbf{Stadium} - High cost to fortify, but offers a high population capacity
+  \item \textbf{Factory} - Good for starting resources, and has a high base integrity.
+  \item \textbf{Apartment} - Low upgrade cost, decent population capacity, and also good
+    for starting resources
+  \item \textbf{House} - Easy to upgrade, but doesn't offer much else. Good for the early
+    game.
+  \item \textbf{Farm} - Difficult to upgrade, but offers more resources, beneficial for end
+    game.
+\end{itemize}
+
+\end{frame}
+
+%-----------END BUILDINGS TYPES-----------
+
+\section{Score}
+
+\subsection{Building Integrity}
+
+%----------BEGIN INTEGRITY----------
+
+\begin{frame}
+
+  \frametitle{Building Integrity}
+
+  \begin{center}
+    {\large How many survive the battle?}
+  \end{center}
+
+  \begin{outline}
+    \1 Each building has a structural integrity rating.
+    \1 This rating can be improved by expending resources.
+    \1 The likelihood of a building's survival is directly related to its
+    structural integrity rating.
+    \1 If a building is destroyed, everything inside it is lost - both people
+    and resources.
+  \end{outline}
+
+  \begin{center}
+    \includegraphics[scale=2.0]{../Images/Apartments.png}
+  \end{center}
+
+\end{frame}
+
+%-----------END INTEGRITY-----------
+
+%----------BEGIN SCORE----------
+
+\begin{frame}
+
+  \frametitle{Score}
+
+  \begin{center}
+    {\large How many survive the war?}
+  \end{center}
+
+  \begin{outline}
+    \1 The remaining resources are consumed by the remaining population.
+    \1 One resource is consumed per citizen per month.
+    \1 The number of initial survivors, number of months survived, and the
+    remaining survivors are all part of the player's score.
+  \end{outline}
+
+  \begin{center}
+    \includegraphics[width=0.5\textwidth]{../Images/score.png}
+  \end{center}
+
+\end{frame}
+
+%-----------END SCORE-----------
+
+
+\end{document}
